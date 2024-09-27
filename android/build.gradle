@@ -1,0 +1,20 @@
+buildscript {
+    ext.kotlin_version ='1.9.0'
+    repositories {
+        google() // Dépôt Maven de Google, requis pour le plugin Gradle Android
+        mavenCentral() // Dépôt Maven Central pour d'autres dépendances
+    }
+    dependencies {
+         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath 'com.android.tools.build:gradle:7.4.2' // Plugin Gradle Android
+        // D'autres dépendances de classepath peuvent aller ici
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+ 
